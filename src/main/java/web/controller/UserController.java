@@ -55,7 +55,7 @@ public class UserController {
         return "edit_user";
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public String editUser(@ModelAttribute("user") User user,
                            BindingResult bindingResult, @PathVariable("id") int id) {
         if (bindingResult.hasErrors())
